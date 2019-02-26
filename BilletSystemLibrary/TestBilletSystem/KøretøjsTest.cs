@@ -10,26 +10,32 @@ namespace TestBilletSystem
         [TestMethod]
         public void TestBilPris()
         {
-            var result = Bil.Pris();
+            Bil b1 = new Bil();
+            var result = b1.Pris();
             Assert.AreEqual(240, result);
         }
 
         [TestMethod]
         public void TestKøretøjBil()
         {
-            var result = Bil.Køretøj();
+            Bil b1 = new Bil();
+            var result = b1.KøretøjType();
             Assert.AreEqual("Bil", result);
         }
 
+        [TestMethod]
         public void TestMCPris()
         {
-            var result = Motorcykel.Pris();
+            Motorcykel m1 = new Motorcykel();
+            var result = m1.Pris();
             Assert.AreEqual(125, result);
         }
 
+        [TestMethod]
         public void TestKøretøjMotorcykel()
         {
-            var result = Motorcykel.Køretøj();
+            Motorcykel m1 = new Motorcykel();
+            var result = m1.KøretøjType();
             Assert.AreEqual("Motorcykel", result);
         }
 

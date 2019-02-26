@@ -4,24 +4,21 @@ using System.Text;
 
 namespace BilletSystemLibrary
 {
-    public class Motorcykel : Køretøj
+    public abstract class Køretøj
     {
+        public string Nummerplade { get; set; }
+        public DateTime Dato { get; set; }
+
         /// <summary>
-        /// Metoden retunerer prisen for en motorcykel.
+        /// Metoden retunerer prisen for et køretøj.
         /// </summary>
         /// <returns></returns>
-        public override decimal Pris()
-        {
-            return 125;
-        }
+        public abstract decimal Pris();
 
         /// <summary>
         /// Metoden retunerer køretøjstypen
         /// </summary>
         /// <returns></returns>
-        public override string KøretøjType()
-        {
-            return "Motorcykel";
-        }
+        public abstract string KøretøjType();
     }
 }

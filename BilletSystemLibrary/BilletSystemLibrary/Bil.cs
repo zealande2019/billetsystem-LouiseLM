@@ -2,25 +2,22 @@
 
 namespace BilletSystemLibrary
 {
-    public class Bil
+    public class Bil : Køretøj
     {
-        public string Nummerplade { get; set; }
-        public DateTime Dato { get; set; }
-
         /// <summary>
         /// Metoden retunerer prisen for en bil.
         /// </summary>
         /// <returns></returns>
-        public static decimal Pris()
+        public override decimal Pris()
         {
             return 240;
         }
 
         /// <summary>
-        /// Metoden retunerer kæretøjstypen
+        /// Metoden retunerer køretøjstypen
         /// </summary>
         /// <returns></returns>
-        public static string Køretøj()
+        public override string KøretøjType()
         {
             return "Bil";
         }
