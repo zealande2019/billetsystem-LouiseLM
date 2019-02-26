@@ -4,7 +4,7 @@ using BilletSystemLibrary;
 namespace TestBilletSystem
 {
     [TestClass]
-    public class BilTest
+    public class KøretøjstestTest
     {
 
         [TestMethod]
@@ -15,10 +15,23 @@ namespace TestBilletSystem
         }
 
         [TestMethod]
-        public void TestKøretøj()
+        public void TestKøretøjBil()
         {
             var result = Bil.Køretøj();
             Assert.AreEqual("Bil", result);
         }
+
+        public void TestMCPris()
+        {
+            var result = Motorcykel.Pris();
+            Assert.AreEqual(125, result);
+        }
+
+        public void TestKøretøjMotorcykel()
+        {
+            var result = Motorcykel.Køretøj();
+            Assert.AreEqual("Motorcykel", result);
+        }
+
     }
 }
