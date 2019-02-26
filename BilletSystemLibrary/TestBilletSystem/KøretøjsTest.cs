@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BilletSystemLibrary;
+using System;
 
 namespace TestBilletSystem
 {
@@ -37,6 +38,15 @@ namespace TestBilletSystem
             Motorcykel m1 = new Motorcykel();
             var result = m1.KøretøjType();
             Assert.AreEqual("Motorcykel", result);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestNummerplade()
+        {
+            Motorcykel m1 = new Motorcykel();
+            m1.Nummerplade = "12345678";
+            Assert.Fail();
         }
 
     }
