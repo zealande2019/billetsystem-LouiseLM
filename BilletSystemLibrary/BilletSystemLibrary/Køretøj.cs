@@ -8,6 +8,7 @@ namespace BilletSystemLibrary
     {
         public string _nummerplade;
         public DateTime Dato { get; set; }
+        private bool _brobizz;
 
         public string Nummerplade
         {
@@ -22,17 +23,28 @@ namespace BilletSystemLibrary
             }
         }
 
-
         /// <summary>
         /// Metoden retunerer prisen for et køretøj.
         /// </summary>
         /// <returns></returns>
-        public abstract decimal Pris();
+        public virtual decimal Pris()
+        {
+            if (_brobizz == true)
+            {
+                return  5;
+            }
+            return 200;
+        }
 
         /// <summary>
         /// Metoden retunerer køretøjstypen
         /// </summary>
         /// <returns></returns>
         public abstract string KøretøjType();
+
+        public Køretøj(bool brobizz)
+        {
+            this._brobizz = brobizz;
+        }
     }
 }
